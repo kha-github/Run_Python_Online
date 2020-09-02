@@ -41,10 +41,10 @@ print(time.time() - start)
         mode: 'text',
         pythonPath: '', 
         pythonOptions: ['-u'],
-        scriptPath: 'C:/Users/booro/Desktop/pyCompiler',
+        scriptPath: `${__dirname}`,
         args: [ 'value1', 'value2', 'value3'], // 전달인자(sys.argv[i] 사용하면 받을 수 있음)
       };
-  
+      console.log('dirname: ' + __dirname);
       PythonShell.run('/exec.py', options, function (err, results) {
         // 코드에 에러가 있는 경우: err.message로 에러 내용 출력
         if (err) {
@@ -81,7 +81,7 @@ sys.stdout.close()
       mode: 'json',
       pythonPath: '', 
       pythonOptions: ['-u'],
-      scriptPath: 'C:/Users/booro/Desktop/pyCompiler',
+      scriptPath: `${__dirname}`,
       args: [ 'value1', 'value2', 'value3'],
       encoding:'utf8'
     };
