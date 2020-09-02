@@ -27,10 +27,10 @@ app.post('/create_process2', (request, response, next)=>{
     var post = request.body;
     var content = `import time, sys, base64;start = time.time();sys.stdout=open('output.out', 'w', encoding='utf8')
 
-  ` + post.description + `
+` + post.description + `
 print()
-print('Run time: ', time.time() - start)
-sys.stdout.close()
+print('Running time: ',end='')
+print(time.time() - start)
 `;
   
     fs.writeFile(`./exec.py`, content, function(err){
