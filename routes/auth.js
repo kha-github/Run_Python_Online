@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var db = require('../lib/db.js');
 var bcrypt = require('bcrypt');
 var auth = require('../lib/auth.js');
 

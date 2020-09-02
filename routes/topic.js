@@ -3,7 +3,6 @@ var fs = require('fs');
 var sanitizeHtml = require('sanitize-html');
 var express = require('express');
 var router = express.Router();
-var db = require('../lib/db.js');
 var auth = require('../lib/auth.js');
 var template = require('../lib/template.js');
 var multer = require('multer');
