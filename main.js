@@ -53,10 +53,11 @@ app.get('/', (request, response) => {
 
 app.post('/create_process2', (request, response, next)=>{
     var post = request.body;
-    var content = `import time, sys, base64;start = time.time();sys.stdout=open('output.txt', 'w');` + post.description + `
+    var content = `import time, sys, base64;start = time.time();sys.stdout=open('output.out', 'w', encoding='utf8');` + post.description + `
 print()
-print('Run time: ', time.time() - start)`;
-  
+print('Run time: ', time.time() - start)
+sys.stdout.close()
+`;
   
     fs.writeFile(`./exec.py`, content, function(err){
       console.log('success');
@@ -74,7 +75,7 @@ print('Run time: ', time.time() - start)`;
   
           response.send(html);
         } else{
-          fs.readFile('./output.txt', 'utf8', function(err, data){
+          fs.readFile('./output.out', 'utf8', function(err, data){
             console.log(data);
             var sanitizedData = sanitizeHtml(data);
             console.log('=======sanitize======');
