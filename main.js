@@ -65,50 +65,50 @@ print(time.time() - start)
 });
 
 // 입력 값을 받기 위한 테스트 코드(수정 필요)
-app.post('/create_process3', (request, response, next)=>{
-  var post = request.body;
-  var content = `import time, sys, base64;start = time.time();sys.stdout=open('output.out', 'w', encoding='utf8')
+// app.post('/create_process3', (request, response, next)=>{
+//   var post = request.body;
+//   var content = `import time, sys, base64;start = time.time();sys.stdout=open('output.out', 'w', encoding='utf8')
 
-` + post.description + `
-print()
-print('Run time: ', time.time() - start)
-sys.stdout.close()
-`;
+// ` + post.description + `
+// print()
+// print('Run time: ', time.time() - start)
+// sys.stdout.close()
+// `;
 
-  fs.writeFile(`./exec.py`, content, function(err){
-    console.log('success');
-    var options = {
-      mode: 'json',
-      pythonPath: '', 
-      pythonOptions: ['-u'],
-      scriptPath: `${__dirname}`,
-      args: [ 'value1', 'value2', 'value3'],
-      encoding:'utf8'
-    };
+//   fs.writeFile(`./exec.py`, content, function(err){
+//     console.log('success');
+//     var options = {
+//       mode: 'json',
+//       pythonPath: '', 
+//       pythonOptions: ['-u'],
+//       scriptPath: `${__dirname}`,
+//       args: [ 'value1', 'value2', 'value3'],
+//       encoding:'utf8'
+//     };
 
-    var pyshell = new PythonShell('exec.py', options);
-    pyshell.send('hi');
-    pyshell.on('message', function (message) {
-      console.log('after pyshell.on');
-      var json = JSON.stringify(message);
-      console.log('after json var');
-      var fs = require('fs');
-      console.log('before writing file');
-      fs.writeFile('myjsonfile.json', json, 'utf8', function () {
-        response.send('success');
-    });
-    });
+//     var pyshell = new PythonShell('exec.py', options);
+//     pyshell.send('hi');
+//     pyshell.on('message', function (message) {
+//       console.log('after pyshell.on');
+//       var json = JSON.stringify(message);
+//       console.log('after json var');
+//       var fs = require('fs');
+//       console.log('before writing file');
+//       fs.writeFile('myjsonfile.json', json, 'utf8', function () {
+//         response.send('success');
+//     });
+//     });
 
-    // pyshell.end(function (err,code,signal) {
-    //   if (err) throw err;
-    //   console.log('The exit code was: ' + code);
-    //   console.log('The exit signal was: ' + signal);
-    //   console.log('finished');
-    //   response.send('success');
-    // });
+//     // pyshell.end(function (err,code,signal) {
+//     //   if (err) throw err;
+//     //   console.log('The exit code was: ' + code);
+//     //   console.log('The exit signal was: ' + signal);
+//     //   console.log('finished');
+//     //   response.send('success');
+//     // });
 
-  });
-});
+//   });
+// });
 
 app.use(function (req, res, next){
     res.status(404).send("Wrong access!")
