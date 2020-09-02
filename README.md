@@ -5,6 +5,7 @@
 
 ![HelloWorld](https://user-images.githubusercontent.com/55964775/91982025-9e812e00-ed64-11ea-973b-345ebeace125.gif)
 <br>
+<img src="https://user-images.githubusercontent.com/55964775/91982025-9e812e00-ed64-11ea-973b-345ebeace125.gif" width="400px">
 
 ![stars2](https://user-images.githubusercontent.com/55964775/91982488-44cd3380-ed65-11ea-9092-82ad17e419b6.gif)
 <br>
