@@ -5,3 +5,7 @@
 <br>
 ![stars2](https://user-images.githubusercontent.com/55964775/91982488-44cd3380-ed65-11ea-9092-82ad17e419b6.gif)
 <br>
+
+
+### 프로젝트 동기 및 목표
+
