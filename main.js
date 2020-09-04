@@ -27,7 +27,7 @@ app.post('/create_process2', (request, response, next)=>{
     // content: 파이썬 코드(실행 시간 측정 코드 + 출력을 파일에 저장하는 코드 + 입력 받은 코드)
     var content = `import time, sys, base64;start = time.time();sys.stdout=open('output.out', 'w', encoding='utf8')
 
-` + post.description + `
+` + post.description + `;
 print()
 print('Running time: ',end='')
 print(time.time() - start)
