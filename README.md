@@ -1,6 +1,21 @@
 # RunPythonOnline
 
 ### 파이썬3 코드 컴파일 웹사이트
+
+<br>
+
+#### 프로젝트 설치 및 실행 방법
+
+1. 소스코드 zip파일 다운로드 및 압축 풀기
+2. CMD창에서 압축 해제한 프로젝트 디렉토리로 이동
+3. CMD창에서 'npm install' 명령어 입력
+4. CMD창에서 'npm run start' 명령어 입력
+5. 웹브라우져에서 'http://localhost:3000' 으로 이동
+
+
+
+<br>
+
 - 실행 영상
 
 <p align="center"><img src="https://user-images.githubusercontent.com/55964775/91982025-9e812e00-ed64-11ea-973b-345ebeace125.gif" width="700px"><p>
