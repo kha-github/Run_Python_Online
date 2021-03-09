@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 from pprint import pprint
 import requests
 
-html = requests.get('https://search.naver.com/search.naver?query=날씨')
+html = requests.get('https://search.naver.com/search.naver?query=서울특별시+동작구+날씨')
 #pprint(html.text)
 
 soup = BeautifulSoup(html.text, 'html.parser')

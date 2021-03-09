@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0cda4bb6-d0da-4820-ade9-fbbb4ed78750" name="campustaxiServer" url="210.102.225.68:22">
+        <fileTransfer rootFolder="/Users/minsekim" accessType="SFTP" host="210.102.225.68" port="22" sshConfigId="d03f951b-009d-4f24-aafd-ea9d6644f31e" sshConfig="minsekim@210.102.225.68:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="3ed1ed6c-0dec-4316-8f4f-6530f5cbd24b" name="kellyServer">
+        <fileTransfer rootFolder="/home/ubuntu/kellyServer" accessType="SFTP" host="222.112.225.80" port="7071" sshConfigId="786e89e3-7c58-4333-b5f4-fdf78b91297b" sshConfig="ubuntu@222.112.225.80:7071 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
