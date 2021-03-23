@@ -1,2 +1,0 @@
-x:  value1
-y:  value2
